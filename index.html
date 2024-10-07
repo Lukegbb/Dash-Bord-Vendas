@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Gerenciamento de Vendas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Dashboard de Gerenciamento de Vendas</h1>
+    </header>
+
+    <main>
+        <section id="sales-management">
+            <h2>Gerenciamento de Vendas</h2>
+            <table id="salesTable">
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Valor (R$)</th>
+                        <th>Quantidade Vendida</th>
+                    </tr>
+                </thead>
+                <tbody id="salesBody">
+                    <!-- Linhas dinâmicas aqui -->
+                </tbody>
+            </table>
+            <button id="addSaleBtn">Adicionar Venda</button>
+        </section>
+
+        <section id="inventory-management">
+            <h2>Gerenciamento de Inventário</h2>
+            <table id="inventoryTable">
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Custo (R$)</th>
+                        <th>Preço de Venda (R$)</th>
+                        <th>Quantidade em Estoque</th>
+                    </tr>
+                </thead>
+                <tbody id="inventoryBody">
+                    <!-- Linhas dinâmicas aqui -->
+                </tbody>
+            </table>
+            <button id="addInventoryBtn">Adicionar Produto</button>
+        </section>
+
+        <section id="finance-management">
+            <h2>Controle Financeiro</h2>
+            <table id="financeTable">
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Descrição</th>
+                        <th>Valor (R$)</th>
+                        <th>Tipo</th> <!-- Entrada ou Saída -->
+                    </tr>
+                </thead>
+                <tbody id="financeBody">
+                    <!-- Linhas dinâmicas aqui -->
+                </tbody>
+            </table>
+            <h3>Saldo Diário: R$ <span id="dailyBalance">0.00</span></h3>
+            <h3>Saldo Semanal: R$ <span id="weeklyBalance">0.00</span></h3>
+            <button id="addTransactionBtn">Adicionar Transação</button>
+        </section>
+
+        <canvas id="salesChart"></canvas>
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/inventory.js"></script>
+    <script src="js/finance.js"></script>
+</body>
+</html>
